@@ -1,0 +1,53 @@
+# Shell
+l3build
+latex-bin
+latexmk
+makeindex
+pdftex
+xetex
+#
+# l3doc
+l3kernel
+## Base
+latex
+## Required
+graphics
+tools
+psnfss
+## Generic
+hologo
+## Contrib
+alphalph
+amsmath
+amsfonts
+booktabs
+cm-super
+colortbl
+csquotes
+ec
+enumitem
+fancyvrb
+hypdoc
+hyperref
+lm
+manfnt
+metafont
+mfware
+oberdiek
+underscore
+xcolor
+#
+# Required
+beamer
+pgf
+ragged2e
+#
+# Preamble
+cite
+libertine
+microtype
+### Required by `pdfpages`
+pdflscape
+###
+pdfpages
+siunitx

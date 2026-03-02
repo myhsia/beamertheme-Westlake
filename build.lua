@@ -17,8 +17,8 @@ uploader            = "Mingyu Xia"
 maintainid          = "myhsia"
 email               = "myhsia@outlook.com"
 repository          = "https://github.com/" .. maintainid .. "/" .. module
-summary             = ""
-description         = ""
+summary             = "A beamer theme inspired by West Lake and Westlake University."
+description         = "The `Westlake` Beamer Theme is inspired by West Lake, a famous freshwater lake in Hangzhou, China, and Westlake University."
 
 --[==========================================[--
           Build, Pack, Tag, and Upload
