@@ -11,7 +11,7 @@
 
 module              = "beamertheme-Westlake"
 version             = "v0.1A"
-date                = "2026-03-01"
+date                = "2026-03-02"
 maintainer          = "Mingyu Xia"
 uploader            = "Mingyu Xia"
 maintainid          = "myhsia"
@@ -43,7 +43,7 @@ uploadconfig  = {
   summary           = summary,
   description       = description,
   license           = "lppl1.3c",  
-  ctanPath          = "/macros/latex/contrib/" .. module,
+  ctanPath          = "/macros/latex/contrib/beamer-contrib/themes/" .. module,
   home              = "https://github.com/" .. maintainid,
   bugtracker        = repository .. "/issues",
   support           = repository .. "/issues",
