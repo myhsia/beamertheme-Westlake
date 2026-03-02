@@ -1,8 +1,8 @@
-[![CTAN Version](https://img.shields.io/ctan/v/beamertheme-Westlake)](https://ctan.org/pkg/beamertheme-Westlake)
-[![GitHub Release](https://img.shields.io/github/v/release/myhsia/beamertheme-Westlake)](https://github.com/myhsia/beamertheme-Westlake/releases/latest)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/myhsia/beamertheme-Westlake)](https://github.com/myhsia/beamertheme-Westlake/commits)
-[![Actions Status](https://github.com/myhsia/beamertheme-Westlake/actions/workflows/main.yaml/badge.svg?branch=main)](https://github.com/myhsia/beamertheme-Westlake/actions)
-[![GitHub Repo stars](https://img.shields.io/github/stars/myhsia/beamertheme-Westlake)](https://github.com/myhsia/beamertheme-Westlake)
+[![CTAN Version](https://img.shields.io/ctan/v/beamertheme-westlake)](https://ctan.org/pkg/beamertheme-westlake)
+[![GitHub Release](https://img.shields.io/github/v/release/myhsia/beamertheme-westlake)](https://github.com/myhsia/beamertheme-westlake/releases/latest)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/myhsia/beamertheme-westlake)](https://github.com/myhsia/beamertheme-westlake/commits)
+[![Actions Status](https://github.com/myhsia/beamertheme-westlake/actions/workflows/main.yaml/badge.svg?branch=main)](https://github.com/myhsia/beamertheme-westlake/actions)
+[![GitHub Repo stars](https://img.shields.io/github/stars/myhsia/beamertheme-westlake)](https://github.com/myhsia/beamertheme-westlake)
 
 The `Westlake` Beamer Theme
 ===========================
@@ -19,13 +19,13 @@ To load this theme under the `beamer` class, write the lines
 
 to set the theme color and graphics.
 
-See `beamertheme-Westlake.pdf` for more. Happy TeXing!
+See `beamertheme-westlake.pdf` for more. Happy TeXing!
 
 Issues
 ------
 
-The issue tracker for `beamertheme-Westlake` is currently located
-[on GitHub](https://github.com/myhsia/pbeamertheme-Westlake).
+The issue tracker for `beamertheme-westlake` is currently located
+[on GitHub](https://github.com/myhsia/pbeamertheme-westlake).
 
 Build status
 ------------
@@ -34,7 +34,7 @@ This project uses [GitHub Actions](https://github.com/features/actions)
 as a hosted continuous integration service. For each commit, the build status
 is tested using the current release of TeX Live.
 
-_Current build status:_ ![build status](https://github.com/myhsia/beamertheme-Westlake/actions/workflows/main.yaml/badge.svg?branch=main)
+_Current build status:_ ![build status](https://github.com/myhsia/beamertheme-westlake/actions/workflows/main.yaml/badge.svg?branch=main)
 
 Copyright and License
 ---------------------

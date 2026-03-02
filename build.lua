@@ -9,7 +9,7 @@
              Do Check Before Push
 --]==========================================]--
 
-module              = "beamertheme-Westlake"
+module              = "beamertheme-westlake"
 version             = "v0.1A"
 date                = "2026-03-02"
 maintainer          = "Mingyu Xia"
@@ -30,7 +30,7 @@ cleanfiles          = {"*.log", "*.pdf", "*.zip", "*.curlopt"}
 docsuppdirs         = {"media"}
 excludefiles        = {"*~"}
 typesetdemofiles    = {module .. "-demo.tex"}
-textfiles           = {"*.md", "LICENSE", "*.lua"}
+textfiles           = {"README.md", "LICENSE", "*.lua"}
 typesetexe          = "latexmk -pdflatex"
 typesetruns         = 1
 uploadconfig  = {
