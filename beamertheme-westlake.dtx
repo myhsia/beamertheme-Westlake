@@ -220,7 +220,7 @@ The Current Maintainer of this work is **Mingyu Xia**.
   \tikz [remember picture, overlay] {%
     \ifnum \insertpagenumber=1
       \ifcsname westlake@mainbg\endcsname
-        \node [above, inner sep = 0pt, opacity = .2]
+        \node [above, inner sep = 0pt, opacity = .15]
           at (current page.south)
           {\includegraphics
             [width = \paperwidth, height = \paperwidth]{\westlake@mainbg}};
@@ -238,21 +238,23 @@ The Current Maintainer of this work is **Mingyu Xia**.
         to[bend left = 6] ([yshift = 1.4cm]current page.south east) -- cycle;
     \else
       \ifsection \ifcsname westlake@mainbg\endcsname
-        \node [above, inner sep = 0pt, opacity = .2]
+        \node [above, inner sep = 0pt, opacity = .15]
           at (current page.south)
           {\includegraphics
             [width = \paperwidth, height = \paperwidth]{\westlake@mainbg}};
         \fi
       \else \ifcsname westlake@basebg\endcsname
-        \node [above, inner sep = 0pt, opacity = .8]
+        \node [above, inner sep = 0pt, opacity = .3]
           at (current page.south)
           {\includegraphics
             [width = \paperwidth, height = \paperwidth]{\westlake@basebg}};
         \fi
+        \ifcsname westlake@logo\endcsname
+          \node [inner sep = 0pt, opacity = .1, xshift = -2em]
+            at (current page.east)
+            {\includegraphics[height = .75\paperheight]{\westlake@logo}};
+        \fi
       \fi
-      \node [inner sep = 0pt, opacity = .1, xshift = -2em]
-        at (current page.east)
-        {\includegraphics[height = .75\paperheight]{\westlake@logo}};
     \fi
   }
 }

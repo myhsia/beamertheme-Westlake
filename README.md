@@ -25,7 +25,7 @@ Issues
 ------
 
 The issue tracker for `beamertheme-westlake` is currently located
-[on GitHub](https://github.com/myhsia/pbeamertheme-westlake).
+[on GitHub](https://github.com/myhsia/beamertheme-westlake/issues).
 
 Build status
 ------------
