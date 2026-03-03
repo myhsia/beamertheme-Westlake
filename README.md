@@ -15,7 +15,9 @@ Overview
 
 To load this theme under the `beamer` class, write the lines
 
-    \usetheme[logo = <file>, badge = <file>, mainbg = <file>, basebg = <file>]{westlake}
+    \usetheme[logobg    = <file>, mainbg    = <file>, basebg    = <file>,
+              logobg.op = <file>, mainbg.op = <file>, basebg.op = <file>,
+              lbadge    = <file>, rbadge    = <file>]{westlake}
 
 to set the theme color and graphics.
 

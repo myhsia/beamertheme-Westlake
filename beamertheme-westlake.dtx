@@ -52,7 +52,9 @@ Overview
 
 To load this theme under the `beamer` class, write the lines
 
-    \usetheme[logo = <file>, badge = <file>, mainbg = <file>, basebg = <file>]{westlake}
+    \usetheme[logobg    = <file>, mainbg    = <file>, basebg    = <file>,
+              logobg.op = <file>, mainbg.op = <file>, basebg.op = <file>,
+              lbadge    = <file>, rbadge    = <file>]{westlake}
 
 to set the theme color and graphics.
 
@@ -135,8 +137,8 @@ The Current Maintainer of this work is **Mingyu Xia**.
 %
 % The demo loads the theme with the following lines
 % \begin{quote}
-%   \cs{usetheme}"[logo   = "\file{westlake-logo.pdf}","\\
-%       "          badge  = "\file{westlake-badge.pdf}","\\
+%   \cs{usetheme}"[logobg = "\file{westlake-logo.pdf}","\\
+%       "          lbadge = "\file{westlake-badge.pdf}","\\
 %       "          mainbg = "\file{westlake-paint.png}","\\
 %       "          basebg = "\file{plain.png}"]{westlake}"
 % \end{quote}
@@ -165,12 +167,17 @@ The Current Maintainer of this work is **Mingyu Xia**.
 %    \end{macrocode}
 % Set up the options.
 %    \begin{macrocode}
-\DeclareOptionBeamer{themergb}{\definecolor{westlake}{rgb}{#1}}
-\DeclareOptionBeamer{logo}    {\gdef \westlake@logo       {#1}}
-\DeclareOptionBeamer{badge}   {\gdef \westlake@badge      {#1}}
-\DeclareOptionBeamer{mainbg}  {\gdef \westlake@mainbg     {#1}}
-\DeclareOptionBeamer{basebg}  {\gdef \westlake@basebg     {#1}}
-\ExecuteOptionsBeamer{themergb = {.132, .324, .570}}
+\DeclareOptionBeamer{themergb}  {\definecolor{westlake}{rgb}{#1}}
+\DeclareOptionBeamer{lbadge}    {\gdef \westlake@lbadge     {#1}}
+\DeclareOptionBeamer{rbadge}    {\gdef \westlake@rbadge     {#1}}
+\DeclareOptionBeamer{logobg}    {\gdef \westlake@logobg     {#1}}
+\DeclareOptionBeamer{logobg.op} {\gdef \westlake@logobg@op  {#1}}
+\DeclareOptionBeamer{mainbg}    {\gdef \westlake@mainbg     {#1}}
+\DeclareOptionBeamer{mainbg.op} {\gdef \westlake@mainbg@op  {#1}}
+\DeclareOptionBeamer{basebg}    {\gdef \westlake@basebg     {#1}}
+\DeclareOptionBeamer{basebg.op} {\gdef \westlake@basebg@op  {#1}}
+\ExecuteOptionsBeamer{themergb = {.132, .324, .570},
+                      logobg.op = .1, mainbg.op = .15, basebg.op = .3}
 \ProcessOptionsBeamer
 %    \end{macrocode}
 % Configure the theme color and the inner theme.
@@ -194,11 +201,20 @@ The Current Maintainer of this work is **Mingyu Xia**.
 \AtBeginSection[]{%
   \sectiontrue
   \begin{frame}
-    \tikz [remember picture, overlay]
-      \node [below right, shift = {(.5ex,-1em)}]
-        at (current page.north west)
-        {\includegraphics
-          [height = \dimeval{2\paperheight/15}]{\westlake@badge}};
+    \tikz [remember picture, overlay] {%
+      \ifcsname westlake@lbadge\endcsname
+        \node [below right, shift = {(.5ex,-1em)}]
+          at (current page.north west)
+          {\includegraphics
+            [height = \dimeval{2\paperheight/15}]{\westlake@lbadge}};
+      \fi
+      \ifcsname westlake@rbadge\endcsname
+        \node [below left, shift = {(-.5ex,-1em)}]
+          at (current page.north east)
+          {\includegraphics
+            [height = \dimeval{2\paperheight/15}]{\westlake@rbadge}};
+      \fi
+    }
     \vfill
     \usebeamerfont{title}\bfseries \color{westlake}%
     \insertsectionhead \par
@@ -220,7 +236,7 @@ The Current Maintainer of this work is **Mingyu Xia**.
   \tikz [remember picture, overlay] {%
     \ifnum \insertpagenumber=1
       \ifcsname westlake@mainbg\endcsname
-        \node [above, inner sep = 0pt, opacity = .15]
+        \node [above, inner sep = 0pt, opacity = \westlake@mainbg@op]
           at (current page.south)
           {\includegraphics
             [width = \paperwidth, height = \paperwidth]{\westlake@mainbg}};
@@ -238,21 +254,21 @@ The Current Maintainer of this work is **Mingyu Xia**.
         to[bend left = 6] ([yshift = 1.4cm]current page.south east) -- cycle;
     \else
       \ifsection \ifcsname westlake@mainbg\endcsname
-        \node [above, inner sep = 0pt, opacity = .15]
+        \node [above, inner sep = 0pt, opacity = \westlake@mainbg@op]
           at (current page.south)
           {\includegraphics
             [width = \paperwidth, height = \paperwidth]{\westlake@mainbg}};
         \fi
       \else \ifcsname westlake@basebg\endcsname
-        \node [above, inner sep = 0pt, opacity = .3]
+        \node [above, inner sep = 0pt, opacity = \westlake@basebg@op]
           at (current page.south)
           {\includegraphics
             [width = \paperwidth, height = \paperwidth]{\westlake@basebg}};
         \fi
-        \ifcsname westlake@logo\endcsname
-          \node [inner sep = 0pt, opacity = .1, xshift = -2em]
+        \ifcsname westlake@logobg\endcsname
+          \node [inner sep = 0pt, opacity = \westlake@logobg@op, xshift = -2em]
             at (current page.east)
-            {\includegraphics[height = .75\paperheight]{\westlake@logo}};
+            {\includegraphics[height = .75\paperheight]{\westlake@logobg}};
         \fi
       \fi
     \fi
@@ -262,9 +278,18 @@ The Current Maintainer of this work is **Mingyu Xia**.
 % Configure the badge at the north west corners.
 %    \begin{macrocode}
 \titlegraphic{%
-  \tikz [remember picture, overlay]
-    \node [below right, shift = {(.5ex,-.5em)}] at (current page.north west)
-      {\includegraphics[height = \dimeval{2\paperheight/15}]{\westlake@badge}};
+  \tikz [remember picture, overlay] {%
+    \ifcsname westlake@lbadge\endcsname
+      \node [below right, shift = {(.5ex,-.5em)}] at (current page.north west)
+        {\includegraphics
+          [height = \dimeval{2\paperheight/15}]{\westlake@lbadge}};
+    \fi
+    \ifcsname westlake@rbadge\endcsname
+      \node [below left, shift = {(-.5ex,-.5em)}] at (current page.north east)
+        {\includegraphics
+          [height = \dimeval{2\paperheight/15}]{\westlake@rbadge}};
+    \fi
+  }
 }
 %    \end{macrocode}
 % Configure the title page, remove the footline and headline
