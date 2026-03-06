@@ -8,7 +8,7 @@
 --]==========================================]--
 
 module              = "beamertheme-westlake"
-version             = "v0.1B"
+version             = "v0.2A"
 date                = "2026-03-06"
 maintainer          = "Mingyu Xia"
 uploader            = "Mingyu Xia"
