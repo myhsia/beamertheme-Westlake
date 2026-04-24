@@ -280,12 +280,12 @@ The Current Maintainer of this work is **Mingyu Xia**.
 \titlegraphic{%
   \tikz [remember picture, overlay] {%
     \ifcsname westlake@lbadge\endcsname
-      \node [below right, shift = {(.5ex,-.5em)}] at (current page.north west)
+      \node [below right, shift = {(.5ex, -.5em)}] at (current page.north west)
         {\includegraphics
           [height = \dimeval{2\paperheight/15}]{\westlake@lbadge}};
     \fi
     \ifcsname westlake@rbadge\endcsname
-      \node [below left, shift = {(-.5ex,-.5em)}] at (current page.north east)
+      \node [below left, shift = {(-.5ex, -.5em)}] at (current page.north east)
         {\includegraphics
           [height = \dimeval{2\paperheight/15}]{\westlake@rbadge}};
     \fi
@@ -306,11 +306,11 @@ The Current Maintainer of this work is **Mingyu Xia**.
 % Configure the blocks, including the colors and the opacity.
 %    \begin{macrocode}
 \setbeamercolor{block title}
-  {use = structure, fg = structure.fg, bg = structure.fg!20!bg}
+  {use = structure,    fg = structure.fg,    bg = structure.fg!20!bg}
 \setbeamercolor{block title alerted}
   {use = alerted text, fg = alerted text.fg, bg = alerted text.fg!20!bg}
 \setbeamercolor{block title example}
-  {use = example text,fg = example text.fg, bg = example text.fg!20!bg}
+  {use = example text, fg = example text.fg, bg = example text.fg!20!bg}
 \setbeamercolor{block body}{%
   use = block title, parent = normal text,
   bg  = block title.bg!50!bg
